@@ -3,23 +3,27 @@ PODS:
   - AlamofireImage (3.4.1):
     - Alamofire (~> 4.7)
   - GiphyCoreSDK (1.4.0)
+  - SnapKit (4.0.1)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
   - GiphyCoreSDK
+  - SnapKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
     - GiphyCoreSDK
+    - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AlamofireImage: 78d67ccbb763d87ba44b21583d2153500a195630
   GiphyCoreSDK: 1fe401c5fc65f182e7aa8b7fb2c9005f2a523374
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
-PODFILE CHECKSUM: de154add1f98ee8de3a656157ac9b567dfb60cea
+PODFILE CHECKSUM: 65f4d071fa411e35c484c44e278184242f3822a7
 
 COCOAPODS: 1.5.3

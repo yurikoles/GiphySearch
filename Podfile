@@ -7,4 +7,5 @@ target 'Giphy Search' do
   pod 'Alamofire'
   pod 'AlamofireImage'
   pod 'GiphyCoreSDK'
+  pod 'SnapKit'
 end

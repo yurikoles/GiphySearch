@@ -7,29 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		48A839EFFA224998E09C4246 /* Pods_GiphySearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C867B2F7F4FB39C63747342 /* Pods_GiphySearch.framework */; };
-		8E5441B980EEBFE4BB9482F5 /* Pods_Giphy_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A65653AFE74452A6667F9AA6 /* Pods_Giphy_Search.framework */; };
+		963964F1215FD5A700B9CB6B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 963964F0215FD5A700B9CB6B /* Launch Screen.storyboard */; };
+		963964F5215FEB8900B9CB6B /* GIFResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963964F4215FEB8900B9CB6B /* GIFResultTableViewCell.swift */; };
+		963964F7215FFF1500B9CB6B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963964F6215FFF1500B9CB6B /* SearchViewModel.swift */; };
+		963964F921600A9300B9CB6B /* FullGIFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963964F821600A9300B9CB6B /* FullGIFViewController.swift */; };
 		964050A8215D2BAD00AF47B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964050A7215D2BAD00AF47B0 /* AppDelegate.swift */; };
-		964050AA215D2BAD00AF47B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964050A9215D2BAD00AF47B0 /* ViewController.swift */; };
-		964050AD215D2BAD00AF47B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964050AB215D2BAD00AF47B0 /* Main.storyboard */; };
+		964050AA215D2BAD00AF47B0 /* SearchViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964050A9215D2BAD00AF47B0 /* SearchViewContoller.swift */; };
 		964050AF215D2BAE00AF47B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964050AE215D2BAE00AF47B0 /* Assets.xcassets */; };
-		964050B2215D2BAE00AF47B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964050B0215D2BAE00AF47B0 /* LaunchScreen.storyboard */; };
+		965A08EF215D404F00EE243A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A08EE215D404F00EE243A /* AppCoordinator.swift */; };
+		965A08F1215D40EE00EE243A /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A08F0215D40EE00EE243A /* SearchCoordinator.swift */; };
+		B675FE61F755DD4851024AC4 /* Pods_Giphy_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2921B32C103CF2EBA1A7F3 /* Pods_Giphy_Search.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3634E82DA0239BE12D914F0B /* Pods-Giphy Search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giphy Search.release.xcconfig"; path = "Pods/Target Support Files/Pods-Giphy Search/Pods-Giphy Search.release.xcconfig"; sourceTree = "<group>"; };
-		8C867B2F7F4FB39C63747342 /* Pods_GiphySearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GiphySearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3754742A1F70EC4AD8BE86B6 /* Pods-Giphy Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giphy Search.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Giphy Search/Pods-Giphy Search.debug.xcconfig"; sourceTree = "<group>"; };
+		3DE0CA8491EFAD93006355F2 /* Pods-Giphy Search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giphy Search.release.xcconfig"; path = "Pods/Target Support Files/Pods-Giphy Search/Pods-Giphy Search.release.xcconfig"; sourceTree = "<group>"; };
+		8E2921B32C103CF2EBA1A7F3 /* Pods_Giphy_Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Giphy_Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		963964F0215FD5A700B9CB6B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		963964F4215FEB8900B9CB6B /* GIFResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFResultTableViewCell.swift; sourceTree = "<group>"; };
+		963964F6215FFF1500B9CB6B /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		963964F821600A9300B9CB6B /* FullGIFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullGIFViewController.swift; sourceTree = "<group>"; };
 		964050A4215D2BAD00AF47B0 /* Giphy Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Giphy Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		964050A7215D2BAD00AF47B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		964050A9215D2BAD00AF47B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		964050AC215D2BAD00AF47B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		964050A9215D2BAD00AF47B0 /* SearchViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewContoller.swift; sourceTree = "<group>"; };
 		964050AE215D2BAE00AF47B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		964050B1215D2BAE00AF47B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		964050B3215D2BAE00AF47B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A65653AFE74452A6667F9AA6 /* Pods_Giphy_Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Giphy_Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B55654F7C3CEB29C1893A3D5 /* Pods-GiphySearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphySearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-GiphySearch/Pods-GiphySearch.release.xcconfig"; sourceTree = "<group>"; };
-		B8CC3DB9773B29F207841D4F /* Pods-GiphySearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphySearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GiphySearch/Pods-GiphySearch.debug.xcconfig"; sourceTree = "<group>"; };
-		BE312496A4447CF8A0C3FE99 /* Pods-Giphy Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giphy Search.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Giphy Search/Pods-Giphy Search.debug.xcconfig"; sourceTree = "<group>"; };
+		965A08EE215D404F00EE243A /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		965A08F0215D40EE00EE243A /* SearchCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,32 +41,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48A839EFFA224998E09C4246 /* Pods_GiphySearch.framework in Frameworks */,
-				8E5441B980EEBFE4BB9482F5 /* Pods_Giphy_Search.framework in Frameworks */,
+				B675FE61F755DD4851024AC4 /* Pods_Giphy_Search.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		316034ACAC5053BA35F48662 /* Frameworks */ = {
+		963964EF215FD58800B9CB6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8C867B2F7F4FB39C63747342 /* Pods_GiphySearch.framework */,
-				A65653AFE74452A6667F9AA6 /* Pods_Giphy_Search.framework */,
+				963964F0215FD5A700B9CB6B /* Launch Screen.storyboard */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8D1D30EC3078FA125BB5F058 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B8CC3DB9773B29F207841D4F /* Pods-GiphySearch.debug.xcconfig */,
-				B55654F7C3CEB29C1893A3D5 /* Pods-GiphySearch.release.xcconfig */,
-				BE312496A4447CF8A0C3FE99 /* Pods-Giphy Search.debug.xcconfig */,
-				3634E82DA0239BE12D914F0B /* Pods-Giphy Search.release.xcconfig */,
-			);
-			name = Pods;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		9640509B215D2BAD00AF47B0 = {
@@ -70,8 +61,9 @@
 			children = (
 				964050A6215D2BAD00AF47B0 /* GiphySearch */,
 				964050A5215D2BAD00AF47B0 /* Products */,
-				8D1D30EC3078FA125BB5F058 /* Pods */,
-				316034ACAC5053BA35F48662 /* Frameworks */,
+				FE73C5F1956A4229B7EA9BAA /* Pods */,
+				AED718DD52C9E4919CBABC21 /* Frameworks */,
+				963964EF215FD58800B9CB6B /* Supporting Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,14 +78,50 @@
 		964050A6215D2BAD00AF47B0 /* GiphySearch */ = {
 			isa = PBXGroup;
 			children = (
+				965A08EC215D3F9200EE243A /* Scenes */,
 				964050A7215D2BAD00AF47B0 /* AppDelegate.swift */,
-				964050A9215D2BAD00AF47B0 /* ViewController.swift */,
-				964050AB215D2BAD00AF47B0 /* Main.storyboard */,
 				964050AE215D2BAE00AF47B0 /* Assets.xcassets */,
-				964050B0215D2BAE00AF47B0 /* LaunchScreen.storyboard */,
 				964050B3215D2BAE00AF47B0 /* Info.plist */,
 			);
 			path = GiphySearch;
+			sourceTree = "<group>";
+		};
+		965A08EC215D3F9200EE243A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				965A08EE215D404F00EE243A /* AppCoordinator.swift */,
+				965A08ED215D3F9B00EE243A /* Search */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		965A08ED215D3F9B00EE243A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				965A08F0215D40EE00EE243A /* SearchCoordinator.swift */,
+				964050A9215D2BAD00AF47B0 /* SearchViewContoller.swift */,
+				963964F4215FEB8900B9CB6B /* GIFResultTableViewCell.swift */,
+				963964F6215FFF1500B9CB6B /* SearchViewModel.swift */,
+				963964F821600A9300B9CB6B /* FullGIFViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		AED718DD52C9E4919CBABC21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E2921B32C103CF2EBA1A7F3 /* Pods_Giphy_Search.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE73C5F1956A4229B7EA9BAA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3754742A1F70EC4AD8BE86B6 /* Pods-Giphy Search.debug.xcconfig */,
+				3DE0CA8491EFAD93006355F2 /* Pods-Giphy Search.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,11 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 964050B6215D2BAE00AF47B0 /* Build configuration list for PBXNativeTarget "Giphy Search" */;
 			buildPhases = (
-				C826924F8AB52A7863847636 /* [CP] Check Pods Manifest.lock */,
+				A0943012559291F1BD1DF8D5 /* [CP] Check Pods Manifest.lock */,
 				964050A0215D2BAD00AF47B0 /* Sources */,
 				964050A1215D2BAD00AF47B0 /* Frameworks */,
 				964050A2215D2BAD00AF47B0 /* Resources */,
-				47E873276B8075ED666D7882 /* [CP] Embed Pods Frameworks */,
+				FF063E6381E75E6A95FA08B4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,42 +184,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				964050B2215D2BAE00AF47B0 /* LaunchScreen.storyboard in Resources */,
+				963964F1215FD5A700B9CB6B /* Launch Screen.storyboard in Resources */,
 				964050AF215D2BAE00AF47B0 /* Assets.xcassets in Resources */,
-				964050AD215D2BAD00AF47B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		47E873276B8075ED666D7882 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Giphy Search/Pods-Giphy Search-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/GiphyCoreSDK/GiphyCoreSDK.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GiphyCoreSDK.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Giphy Search/Pods-Giphy Search-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C826924F8AB52A7863847636 /* [CP] Check Pods Manifest.lock */ = {
+		A0943012559291F1BD1DF8D5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -213,6 +214,34 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FF063E6381E75E6A95FA08B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Giphy Search/Pods-Giphy Search-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/GiphyCoreSDK/GiphyCoreSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GiphyCoreSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Giphy Search/Pods-Giphy Search-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -220,31 +249,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				964050AA215D2BAD00AF47B0 /* ViewController.swift in Sources */,
+				963964F7215FFF1500B9CB6B /* SearchViewModel.swift in Sources */,
+				965A08F1215D40EE00EE243A /* SearchCoordinator.swift in Sources */,
+				965A08EF215D404F00EE243A /* AppCoordinator.swift in Sources */,
+				963964F921600A9300B9CB6B /* FullGIFViewController.swift in Sources */,
+				964050AA215D2BAD00AF47B0 /* SearchViewContoller.swift in Sources */,
 				964050A8215D2BAD00AF47B0 /* AppDelegate.swift in Sources */,
+				963964F5215FEB8900B9CB6B /* GIFResultTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		964050AB215D2BAD00AF47B0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				964050AC215D2BAD00AF47B0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		964050B0215D2BAE00AF47B0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				964050B1215D2BAE00AF47B0 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		964050B4215D2BAE00AF47B0 /* Debug */ = {
@@ -365,7 +380,7 @@
 		};
 		964050B7215D2BAE00AF47B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE312496A4447CF8A0C3FE99 /* Pods-Giphy Search.debug.xcconfig */;
+			baseConfigurationReference = 3754742A1F70EC4AD8BE86B6 /* Pods-Giphy Search.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,13 +393,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yurikoles.GiphySearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		964050B8215D2BAE00AF47B0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3634E82DA0239BE12D914F0B /* Pods-Giphy Search.release.xcconfig */;
+			baseConfigurationReference = 3DE0CA8491EFAD93006355F2 /* Pods-Giphy Search.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -397,7 +412,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yurikoles.GiphySearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
