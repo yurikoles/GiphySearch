@@ -1,0 +1,25 @@
+PODS:
+  - Alamofire (4.7.3)
+  - AlamofireImage (3.4.1):
+    - Alamofire (~> 4.7)
+  - GiphyCoreSDK (1.4.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - GiphyCoreSDK
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - GiphyCoreSDK
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireImage: 78d67ccbb763d87ba44b21583d2153500a195630
+  GiphyCoreSDK: 1fe401c5fc65f182e7aa8b7fb2c9005f2a523374
+
+PODFILE CHECKSUM: de154add1f98ee8de3a656157ac9b567dfb60cea
+
+COCOAPODS: 1.5.3
