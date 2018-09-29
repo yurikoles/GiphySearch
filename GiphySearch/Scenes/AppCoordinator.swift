@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 protocol CoodinatorDelegate: class {
     func needsChangeCoordinator(to coordinatorType: CoordinatorFlow)
 }
@@ -31,7 +30,7 @@ class AppCoordinator {
         self.window.makeKeyAndVisible()
         self.start()
     }
-    
+
     fileprivate func searchFlow() {
         self.navigationController.navigationBar.isHidden = false
         let mainCoordinator = SearchCoordinator(mainDelegate: self)

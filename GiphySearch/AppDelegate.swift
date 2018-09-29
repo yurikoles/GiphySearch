@@ -9,24 +9,24 @@
 import UIKit
 import GiphyCoreSDK
 
-fileprivate let giphyKey = "DaBfesbOSG7qDcYOME8kgb2QV9JhD0IW"
+private let giphyKey = "DaBfesbOSG7qDcYOME8kgb2QV9JhD0IW"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var appCoordinator: AppCoordinator?
-    
+
     func configureAppCoordinator() {
         window = UIWindow()
         guard let window = window
         else {
             fatalError("no window!")
         }
-        
+
         appCoordinator = AppCoordinator(window: window)
     }
-    
+
     func configureGiphySDK () {
         GiphyCore.configure(apiKey: giphyKey)
     }

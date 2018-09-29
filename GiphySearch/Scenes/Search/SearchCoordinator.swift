@@ -10,25 +10,32 @@ import UIKit
 
 class SearchCoordinator {
     weak var mainDelegate: CoodinatorDelegate?
-    var rootNavigationController: UINavigationController!
+    var navigationController: UINavigationController!
 
     init(mainDelegate: CoodinatorDelegate) {
         self.mainDelegate = mainDelegate
     }
 
     func start(nc: UINavigationController) {
-        rootNavigationController = nc
-        nc.pushViewController(SearchViewContoller.searchViewController(self), animated: true)
+        navigationController.pushViewController(searchViewContoller, animated: true)
     }
 }
+    lazy var searchViewContoller: SearchViewContoller = {
+        let searchViewContoller = SearchViewContoller.searchViewController(self)
+        let searchViewModel = SearchViewModel(searchViewContoller)
 
-//MARK: - SearchViewControllerDelegate
+        searchViewContoller.fillViewModel(inputs: searchViewModel,
+                                          outputs: searchViewModel)
+        return searchViewContoller
+    }()
+}
+
+// MARK: - SearchViewControllerDelegate
 extension SearchCoordinator: SearchViewControllerDelegate {
     func showDetails(_ originalURL: URL) {
-        let fullGIFViewController = FullGIFViewController()
-        fullGIFViewController.fullGIFURL = originalURL
-        
-        rootNavigationController.pushViewController(fullGIFViewController,
+        let fullGIFViewController = FullGIFViewController.fullGIFViewController(originalURL)
+
+        navigationController.pushViewController(fullGIFViewController,
                                                     animated: true)
     }
 }

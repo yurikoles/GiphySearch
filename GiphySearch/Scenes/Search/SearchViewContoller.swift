@@ -15,28 +15,31 @@ protocol SearchViewControllerDelegate: class {
 }
 
 class SearchViewContoller: UITableViewController {
-    fileprivate weak var delegate: SearchViewControllerDelegate? = nil
-    
+    fileprivate weak var delegate: SearchViewControllerDelegate?
+    fileprivate var viewModelInputs: SearchViewModelInputs!
+    fileprivate var viewModelOutputs: SearchViewModelOutputs!
+    fileprivate let searchController = UISearchController(searchResultsController: nil)
+
+    struct SearchViewContollerConstants {
+        static let numberOfSections = 1
+        static let cellHeight = CGFloat(100)
+    }
+}
+
+// MARK: - Initialization
+extension SearchViewContoller {
     class func searchViewController(_ delegate: SearchViewControllerDelegate) -> SearchViewContoller {
         let searchViewController = SearchViewContoller()
         searchViewController.delegate = delegate
         return searchViewController
-    }   
-    
-    fileprivate let searchController = UISearchController(searchResultsController: nil)
-    
-    lazy var searchViewModel: SearchViewModel = {
-        let searchViewModel = SearchViewModel(self)
-        return searchViewModel
-    }()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationItem.title = "Search GIFs"
-        setupTableView()
-        setupSearchController()
     }
-    
+
+    func fillViewModel(inputs: SearchViewModelInputs,
+                       outputs: SearchViewModelOutputs) {
+        viewModelInputs = inputs
+        viewModelOutputs = outputs
+    }
+
     func setupTableView() {
         tableView.backgroundColor = .white
         tableView.delegate = self
@@ -45,9 +48,8 @@ class SearchViewContoller: UITableViewController {
                            forCellReuseIdentifier: GIFResultTableViewCell.reuseIdentifier)
         tableView.reloadData()
     }
-    
+
     func setupSearchController() {
-        searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Type to search GIFs"
         navigationItem.searchController = searchController
@@ -58,70 +60,73 @@ class SearchViewContoller: UITableViewController {
     }
 }
 
-//MARK: - UITableViewDataSource
+// MARK: - View ;ife cycle
+extension SearchViewContoller {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.title = "Search GIFs"
+        setupTableView()
+        setupSearchController()
+    }
+}
+
+// MARK: - UITableViewDataSource
 extension SearchViewContoller {
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return SearchViewContollerConstants.numberOfSections
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchViewModel.modelsCount
+        return viewModelOutputs.modelsCount
     }
-    
+
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return SearchViewContollerConstants.cellHeight
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: GIFResultTableViewCell.reuseIdentifier,
-                                                       for: indexPath) as? GIFResultTableViewCell,
-            let gifURL = searchViewModel.smallURL(for: indexPath)
-        else {
-            return UITableViewCell()
-        }
+        guard let gifURL = viewModelOutputs.smallURL(for: indexPath),
+            let cell = tableView.dequeueReusableCell(withIdentifier: GIFResultTableViewCell.reuseIdentifier,
+                                                     for: indexPath) as? GIFResultTableViewCell
+        else { return UITableViewCell() }
 
         cell.fillWithURL(gifURL)
         return cell
     }
 }
 
-//MARK: - UITableViewDelegate
+// MARK: - UITableViewDelegate
 extension SearchViewContoller {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let originalURL = searchViewModel.originalURL(for: indexPath) {
+        if let originalURL = viewModelOutputs.originalURL(for: indexPath) {
             delegate?.showDetails(originalURL)
         }
     }
-}
-
-//MARK: - UISearchResultsUpdating
-extension SearchViewContoller: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {}
-
 }
 
 // MARK: - UISearchBarDelegate
 extension SearchViewContoller: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        searchViewModel.search(searchBar.text)
+        viewModelInputs.search(searchBar.text)
     }
 }
 
+// MARK: - SearchViewModelDelegate
 extension SearchViewContoller: SearchViewModelDelegate {
     func handleError(_ error: NSError) {
         DispatchQueue.main.async { [weak self] in
             let alertController = UIAlertController(title: "Oops!",
                                                     message: error.localizedDescription,
                                                     preferredStyle: .alert)
-            
+
             let alertAction = UIAlertAction(title: "Ok",
                                             style: .default)
             alertController.addAction(alertAction)
             self?.present(alertController, animated: true)
         }
     }
-    
+
     func reload() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
