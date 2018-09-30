@@ -5,4 +5,4 @@ language: swift
 script:
     - set -o pipefail
     - bundle exec pod install --verbose
-    - xcodebuild clean build -workspace GiphySearch.xcworkspace -scheme "Giphy Search" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "OS=12.0,name=iPhone XR"
+    - xcodebuild clean build -workspace GiphySearch.xcworkspace -scheme "Giphy Search" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "OS=12.0,name=iPhone XR"|xcpretty
