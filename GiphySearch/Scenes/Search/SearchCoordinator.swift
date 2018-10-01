@@ -17,9 +17,10 @@ class SearchCoordinator {
     }
 
     func start(nc: UINavigationController) {
+        navigationController = nc
         navigationController.pushViewController(searchViewContoller, animated: true)
     }
-}
+
     lazy var searchViewContoller: SearchViewContoller = {
         let searchViewContoller = SearchViewContoller.searchViewController(self)
         let searchViewModel = SearchViewModel(searchViewContoller)
